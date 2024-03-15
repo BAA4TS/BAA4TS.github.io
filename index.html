@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ANON SMS</title>
+<title>Enviar Mensaje de Texto</title>
 <style>
 body {
     margin: 0;
@@ -19,6 +19,7 @@ body {
     background-color: #333;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    overflow-x: auto;
 }
 
 h1 {
@@ -31,7 +32,7 @@ form {
 }
 
 input[type="text"], input[type="submit"] {
-    width: 100%;
+    width: calc(100% - 22px);
     padding: 1em;
     margin: 1em 0;
     font-size: 1rem;
@@ -40,6 +41,7 @@ input[type="text"], input[type="submit"] {
 }
 
 input[type="submit"] {
+    width: 100%;
     background-color: #4CAF50;
     color: white;
     cursor: pointer;
@@ -53,6 +55,7 @@ input[type="submit"]:hover {
 @media screen and (max-width: 768px) {
     .container {
         padding: 15px;
+        overflow-x: scroll;
     }
     h1 {
         font-size: 1.2rem;
@@ -71,7 +74,7 @@ input[type="submit"]:hover {
 </head>
 <body>
 <div class="container">
-    <h1>SMS GUI</h1>
+    <h1>Enviar Mensaje de Texto</h1>
     <form id="textForm">
         <input type="text" id="phoneNumber" placeholder="Número de Teléfono (sin espacios ni guiones)" required>
         <br>
