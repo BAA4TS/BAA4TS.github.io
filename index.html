@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enviar Mensaje de Texto</title>
+<style>
+    body, html {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+    }
+    form {
+        text-align: center;
+    }
+    input[type="text"], input[type="submit"] {
+        padding: 10px;
+        margin: 5px;
+        font-size: 16px;
+    }
+</style>
+</head>
+<body>
+<form id="textForm">
+    <input type="text" id="phoneNumber" placeholder="Número de Teléfono (sin espacios ni guiones)">
+    <br>
+    <input type="text" id="message" placeholder="Mensaje">
+    <br>
+    <input type="submit" value="Enviar">
+</form>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#textForm').submit(function(event) {
+            event.preventDefault();
+            var phoneNumber = $('#phoneNumber').val();
+            var message = $('#message').val();
+            sendMessage(phoneNumber, message);
+        });
+        
+        function sendMessage(phoneNumber, message) {
+            var requestData = {
+                phone: phoneNumber,
+                message: message,
+                key: 'textbelt'
+            };
+            
+            fetch('https://textbelt.com/text', {
+                method: 'post',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(requestData)
+            })
+            .then(response => {
+                return response.json();
+            })
+            .then(data => {
+                console.log(data);
+                alert(data.success ? 'Mensaje enviado correctamente' : 'Error al enviar el mensaje');
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Error al enviar el mensaje');
+            });
+        }
+    });
+</script>
+</body>
+</html>
