@@ -8,67 +8,60 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #1a1a1a;
-    color: #fff;
+    background-color: #f6f8fa;
+    color: #24292e;
 }
 
 .container {
     max-width: 90%;
     margin: 50px auto;
     padding: 20px;
-    background-color: #333;
+    background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    overflow-x: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1 {
-    text-align: center;
     font-size: 1.5rem;
+    margin-bottom: 20px;
 }
 
 form {
-    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 }
 
 input[type="text"], input[type="submit"] {
-    width: calc(100% - 22px);
+    width: 100%;
     padding: 1em;
     margin: 1em 0;
     font-size: 1rem;
-    border: none;
+    border: 1px solid #d1d5da;
     border-radius: 4px;
 }
 
 input[type="submit"] {
-    width: 100%;
-    background-color: #4CAF50;
+    background-color: #2ea44f;
     color: white;
     cursor: pointer;
 }
 
 input[type="submit"]:hover {
-    background-color: #45a049;
-}
-
-/* Media query para pantallas más pequeñas */
-@media screen and (max-width: 768px) {
-    .container {
-        padding: 15px;
-        overflow-x: scroll;
-    }
-    h1 {
-        font-size: 1.2rem;
-    }
+    background-color: #22863a;
 }
 
 .author-info {
-    text-align: center;
     margin-top: 20px;
 }
 
 .author-info a {
-    color: #fff;
+    color: #0366d6;
 }
 </style>
 </head>
@@ -77,9 +70,7 @@ input[type="submit"]:hover {
     <h1>Enviar Mensaje de Texto</h1>
     <form id="textForm">
         <input type="text" id="phoneNumber" placeholder="Número de Teléfono (sin espacios ni guiones)" required>
-        <br>
         <input type="text" id="message" placeholder="Mensaje" required>
-        <br>
         <input type="submit" value="Enviar">
     </form>
 </div>
