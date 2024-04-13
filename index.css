@@ -1,0 +1,125 @@
+/* Estilos para la imagen de perfil */
+#ImagenDePerfil {
+    display: block;
+    margin: 0 auto;
+    margin-top: 50%;
+    transform: translateY(-50%);
+    width: 190px;
+    height: 190px;
+    border-radius: 120px;
+    background-color: #9000ff;
+    border: 7px double #000000;
+}
+
+/* Estilos para el identificador del perfil */
+#IdentificadorPerfil {
+    text-align: center;
+    color: #aeaeaf;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+}
+
+/* Estilos para la biografía del perfil */
+#IdentificadorPerfilBio {
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    color: #565656;
+}
+
+/* Estilos para la biografía de estudiando */
+#IdentificadorEstudiando {
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    color: #9000ff;
+}
+
+/* Estilos para la barra lateral */
+#SideBarPrincipal {
+    background-color: #1f2027;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+/* Estilos generales para el cuerpo */
+body {
+    background-color: #1b1b1e;
+    overflow-x: hidden;
+}
+
+/* Clase para fondo de cobertura */
+.bg-cover {
+    border-radius: 10px;
+    /* Ajusta el valor según lo redondeado que desees que sean los bordes */
+}
+
+/* Clase para el texto del artículo */
+.txtarticle {
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    font-style: normal;
+    text-align: center;
+    color: #aeaeaf;
+    height: auto;
+    width: 80%;
+    /* Cambio aquí */
+}
+
+/* Clase para resaltar color */
+.HigColor {
+    color: #9000ff;
+}
+
+/* Estilos para el contenedor de texto */
+#TextoPr {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para el contenedor de contenido */
+.ContenedorContenido {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Estilos para el contenedor de iconos sociales */
+.ContenedorIconosSociales {
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.NuveIdea {
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.ContenedorCategoriasSideBar {
+    background-color: #88898b;
+    border: 2px solid #3b3d40;
+    border-radius: 20px;
+}
+
+#IdentificadorCategorias {
+    color: #9000ff;
+    text-align: center;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+
+}
